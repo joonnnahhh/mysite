@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSMowing | Premium Landscaping Services</title>
+    <meta name="description"
+        content="Transform your outdoor space with GreenScape Pro's premium landscaping services. We create beautiful, sustainable landscapes for residential and commercial properties.">
+    <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/490/490091.png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D6A4F',
+                        secondary: '#74C69D',
+                        accent: '#D8F3DC',
+                        dark: '#1B4332',
+                        light: '#F8FAF9'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-sans text-gray-800 bg-light">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-primary text-3xl"><i class="fas fa-leaf"></i></span>
+                <span class="font-serif font-bold text-2xl text-dark">JS<span class="text-primary">Mowing</span></span>
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="menu-toggle" class="lg:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center space-x-8">
+                <li><a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a></li>
+                <!-- <li><a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="#testimonials" class="text-gray-700 hover:text-primary transition-colors">Testimonials</a> -->
+                </li>
+                <li><a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a></li>
+                <!-- <li><a href="#" class="btn-primary">Get a Quote</a></li> -->
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white w-full border-t">
+            <ul class="container mx-auto px-4 py-3 space-y-3">
+                <li><a href="#home" class="block py-2 text-gray-700 hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#services"
+                        class="block py-2 text-gray-700 hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#about" class="block py-2 text-gray-700 hover:text-primary transition-colors">About</a>
+                </li>
+                <!-- <li><a href="#projects"
+                        class="block py-2 text-gray-700 hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="#testimonials"
+                        class="block py-2 text-gray-700 hover:text-primary transition-colors">Testimonials</a></li> -->
+                <li><a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </li>
+                <!-- <li class="pt-2"><a href="#" class="btn-primary inline-block">Get a Quote</a></li> -->
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20">
+        <div class="absolute inset-0 bg-cover bg-center z-0"
+            style="background-image: url('./assets/images/banner.jpg');">
+            <div class="absolute inset-0 bg-black/60 "></div>
+        </div>
+
+        <div class="container mx-auto px-4 z-10 py-20">
+            <div class="max-w-3xl text-white">
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Revitalize Your <span class="text-secondary">Outdoor Space</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100">
+                    Reliable and efficient
+                    lawn care services with a focus on
+                    professional yard manicuring.
+
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="btn-primary">
+                        Explore Services
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <a href="#services" class="text-white text-4xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <div class="inline-block relative mb-4">
+                    <span class="text-primary font-medium px-4 py-1 bg-primary/5 rounded-full">Our Expertise</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6 leading-tight">Maximize Your Home’s <br>
+                    <span class="text-primary relative">Curb<svg class="absolute bottom-1 left-0 w-full" height="6"
+                            viewBox="0 0 200 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 3C50 0.5 150 0.5 200 3" stroke="#74C69D" stroke-width="5"
+                                stroke-linecap="round" />
+                        </svg></span>
+                    <span class="text-primary relative">Appeal<svg class="absolute bottom-1 left-0 w-full" height="6"
+                            viewBox="0 0 200 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 3C50 0.5 150 0.5 200 3" stroke="#74C69D" stroke-width="5"
+                                stroke-linecap="round" />
+                        </svg></span>
+                </h2>
+                <p class="text-gray-600 text-lg">JS Mowing offers comprehensive lawn care solutions tailored to suit
+                    your home.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service Card 1 -->
+                <div
+                    class="service-card group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="./assets/images/services/Lawn Mowing Services.avif" alt="Landscape Design"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Lawn Mowing</h3>
+                            <p class="text-white/90 text-sm">Keep your yard neat, healthy, and perfectly trimmed.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center">
+                            <a href="#contact"
+                                class="text-primary font-medium hover:text-dark transition-colors flex items-center group/link">
+                                <span>Request Estimate</span>
+                                <span class="ml-2 transform group-hover/link:translate-x-1 transition-transform">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="service-card group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="./assets/images/services/Mulch Services.jpeg" alt="Garden Installation"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Mulch Services</h3>
+                            <p class="text-white/90 text-sm">Enhance and refresh your lawn’s look and feel.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center">
+                            <a href="#contact"
+                                class="text-primary font-medium hover:text-dark transition-colors flex items-center group/link">
+                                <span>Request Estimate</span>
+                                <span class="ml-2 transform group-hover/link:translate-x-1 transition-transform">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="service-card group bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="./assets/images/services/Shrub and Hedge Trimming.jpg" alt="Hardscaping"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Shrub and Hedge Trimming</h3>
+                            <p class="text-white/90 text-sm">Neaten your shrubs and hedges to keep them well-shaped and
+                                tidy.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center">
+                            <a href="#contact"
+                                class="text-primary font-medium hover:text-dark transition-colors flex items-center group/link">
+                                <span>Request Estimate</span>
+                                <span class="ml-2 transform group-hover/link:translate-x-1 transition-transform">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-accent/30">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="./assets/images/about-pic.JPG" alt="About GreenScape Pro"
+                        class="rounded-xl shadow-xl w-full h-auto">
+                    <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i class="fas fa-award text-3xl text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Trusted Since</p>
+                                <p class="text-2xl font-bold text-dark">2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="absolute -top-8 -left-8 bg-white p-6 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full">
+                                <i class="fas fa-users text-3xl text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Happy Clients</p>
+                                <p class="text-2xl font-bold text-dark">300+</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div>
+                    <span class="text-primary font-medium">About Us</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">We Maintain Beautiful Outdoor Spaces
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        JS Mowing takes pride in maintaining beautiful outdoor spaces by providing expert lawn care
+                        services that keep yards neat and well-manicured. With meticulous mowing, precise edging, and
+                        thorough cleanup, we ensure every lawn looks lush and vibrant. Our team follows a consistent
+                        schedule using professional-grade equipment to deliver a clean, even cut that enhances curb
+                        appeal. By carefully trimming along walkways, driveways, and garden beds, JS Mowing creates a
+                        polished look that homeowners and businesses can be proud of.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Beyond mowing, JS Mowing also offers services like mulch spreading, hedge trimming, and shrub
+                        shaping to keep landscapes tidy and well-maintained. Freshly laid mulch not only enhances the
+                        visual appeal of flower beds but also helps retain moisture and suppress weeds. Regular hedge
+                        and shrub trimming keeps greenery looking sharp while promoting healthy growth. With attention
+                        to detail and a commitment to customer satisfaction, JS Mowing ensures that every outdoor space
+                        they care for remains pristine and inviting throughout the seasons.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full mt-1">
+                                <i class="fas fa-leaf text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Quality Work</h3>
+                                <p class="text-gray-600">JS Mowing completes jobs on schedule without compromising on
+                                    quality.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full mt-1">
+                                <i class="fas fa-certificate text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Customer Satisfaction</h3>
+                                <p class="text-gray-600">Your satisfaction is our top priority.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full mt-1">
+                                <i class="fas fa-clock text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Timely Delivery</h3>
+                                <p class="text-gray-600">We complete projects on schedule without compromising on
+                                    quality.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full mt-1">
+                                <i class="fas fa-lightbulb text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Innovative Solutions</h3>
+                                <p class="text-gray-600">We bring creative and modern solutions to meet your unique
+                                    needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-medium">Our Portfolio</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">Featured Landscaping Projects</h2>
+                <p class="text-gray-600">Explore our showcase of beautiful landscapes and outdoor spaces we've created
+                    for our clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="./assets/images/protfolio/Modern Backyard Retreat.jpg" alt="Modern Backyard Retreat"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Modern Backyard Retreat</h3>
+                            <p class="text-gray-200 mt-2">A contemporary outdoor living space with fire pit, custom
+                                seating, and native plantings.</p>
+                            <a href="#" class="text-white mt-4 inline-flex items-center font-medium">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="./assets/images/protfolio/Luxury Pool Landscape.jpg" alt="Luxury Pool Landscape"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Luxury Pool Landscape</h3>
+                            <p class="text-gray-200 mt-2">An elegant pool area with custom stonework, tropical plants,
+                                and ambient lighting.</p>
+                            <a href="#" class="text-white mt-4 inline-flex items-center font-medium">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="./assets/images/protfolio/Japanese Garden.jpg" alt="Japanese Garden"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Japanese Garden</h3>
+                            <p class="text-gray-200 mt-2">A tranquil Japanese-inspired garden with koi pond, stone
+                                pathways, and traditional elements.</p>
+                            <a href="#" class="text-white mt-4 inline-flex items-center font-medium">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="./assets/images/protfolio/English Cottage Garden.avif" alt="English Cottage Garden"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">English Cottage Garden</h3>
+                            <p class="text-gray-200 mt-2">A charming cottage garden with perennial flowers, herbs, and
+                                rustic elements.</p>
+                            <a href="#" class="text-white mt-4 inline-flex items-center font-medium">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="./assets/images/protfolio/Modern Front Yard.jpg" alt="Modern Front Yard"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Modern Front Yard</h3>
+                            <p class="text-gray-200 mt-2">A drought-tolerant front yard with contemporary design
+                                elements and native plants.</p>
+                            <a href="#" class="text-white mt-4 inline-flex items-center font-medium">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group overflow-hidden rounded-xl shadow-lg">
+                    <div class="relative overflow-hidden h-80">
+                        <img src="./assets/images/protfolio/Rooftop Garden.jpg" alt="Rooftop Garden"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Rooftop Garden</h3>
+                            <p class="text-gray-200 mt-2">An urban rooftop garden with container plantings, seating
+                                areas, and city views.</p>
+                            <a href="#" class="text-white mt-4 inline-flex items-center font-medium">
+                                View Project <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Process Section -->
+    <!-- <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-medium">Our Process</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">How We Work</h2>
+                <p class="text-gray-600">Our streamlined process ensures a smooth experience from initial consultation
+                    to project completion.</p>
+            </div>
+
+            <div class="relative">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2"></div>
+
+                <div class="space-y-12 md:space-y-0 relative">
+                    <div class="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+                        <div class="md:text-right mb-8 md:mb-0">
+                            <div class="bg-white p-6 rounded-xl shadow-md inline-block">
+                                <div class="flex items-center md:justify-end gap-4">
+                                    <div class="md:order-2">
+                                        <div class="bg-primary/10 p-4 rounded-full">
+                                            <i class="fas fa-comments text-2xl text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Initial Consultation</h3>
+                                        <p class="text-gray-600">We meet to discuss your vision, needs, and budget for
+                                            your outdoor space.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl z-10">
+                                1</div>
+                        </div>
+                    </div>
+
+                    <div class="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+                        <div class="hidden md:flex justify-center md:order-1">
+                            <div
+                                class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl z-10">
+                                2</div>
+                        </div>
+
+                        <div class="md:order-2 mb-8 md:mb-0">
+                            <div class="bg-white p-6 rounded-xl shadow-md inline-block">
+                                <div class="flex items-center gap-4">
+                                    <div>
+                                        <div class="bg-primary/10 p-4 rounded-full">
+                                            <i class="fas fa-pencil-ruler text-2xl text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Design & Planning</h3>
+                                        <p class="text-gray-600">We create detailed designs and plans based on your
+                                            requirements and site conditions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+                        <div class="md:text-right mb-8 md:mb-0">
+                            <div class="bg-white p-6 rounded-xl shadow-md inline-block">
+                                <div class="flex items-center md:justify-end gap-4">
+                                    <div class="md:order-2">
+                                        <div class="bg-primary/10 p-4 rounded-full">
+                                            <i class="fas fa-file-contract text-2xl text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Proposal & Agreement</h3>
+                                        <p class="text-gray-600">We provide a detailed proposal with pricing, timeline,
+                                            and scope of work for your approval.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl z-10">
+                                3</div>
+                        </div>
+                    </div>
+
+                    <div class="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+                        <div class="hidden md:flex justify-center md:order-1">
+                            <div
+                                class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl z-10">
+                                4</div>
+                        </div>
+
+                        <div class="md:order-2 mb-8 md:mb-0">
+                            <div class="bg-white p-6 rounded-xl shadow-md inline-block">
+                                <div class="flex items-center gap-4">
+                                    <div>
+                                        <div class="bg-primary/10 p-4 rounded-full">
+                                            <i class="fas fa-hammer text-2xl text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Implementation</h3>
+                                        <p class="text-gray-600">Our skilled team brings your landscape design to life
+                                            with quality materials and craftsmanship.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:grid md:grid-cols-2 md:gap-8 md:items-center">
+                        <div class="md:text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-md inline-block">
+                                <div class="flex items-center md:justify-end gap-4">
+                                    <div class="md:order-2">
+                                        <div class="bg-primary/10 p-4 rounded-full">
+                                            <i class="fas fa-check-circle text-2xl text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold mb-2">Final Walkthrough</h3>
+                                        <p class="text-gray-600">We review the completed project with you to ensure your
+                                            complete satisfaction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hidden md:flex justify-center">
+                            <div
+                                class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl z-10">
+                                5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="#contact" class="btn-primary">Start Your Project Today</a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-medium">Testimonials</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">What Our Clients Say</h2>
+                <p class="text-gray-600">Hear from our satisfied clients about their experience working with JS Mowing
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-8 rounded-xl shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "JS Mowing transformed our backyard into a beautiful oasis. Their attention to detail and
+                        creative design exceeded our expectations. We now have an outdoor space that we enjoy
+                        year-round."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./assets/images/testimonial/lady.jpg" alt="Sarah Johnson"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Residential Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light p-8 rounded-xl shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "We hired JS Mowing for our commercial property landscaping, and they delivered exceptional
+                        results. Their team was professional, efficient, and the finished project has received numerous
+                        compliments from our clients."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./assets/images/testimonial/tieman.jpg" alt="Michael Roberts"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">Michael Roberts</h4>
+                            <p class="text-gray-500 text-sm">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-light p-8 rounded-xl shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "The irrigation system installed by JS Mowing has made a huge difference in our garden's
+                        health while reducing our water bill. Their knowledge of water-efficient solutions is
+                        impressive."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <img src="./assets/images/testimonial/team2.jpg" alt="Emily Chen"
+                            class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold">Emily Chen</h4>
+                            <p class="text-gray-500 text-sm">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-primary/5 rounded-2xl p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="font-serif text-3xl font-bold mb-4">Ready to Transform Your Outdoor Space?</h3>
+                        <p class="text-gray-600 mb-6 md:mb-0">
+                            Join our satisfied clients and experience the GreenScape Pro difference. Contact us today
+                            for a free consultation and quote.
+                        </p>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <a href="#contact" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-medium">Contact Us</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">Get In Touch</h2>
+                <p class="text-gray-600">Have questions or ready to inquire about our services? Reach out to us for a
+                    free estimate.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                    <input type="text" id="name"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition-colors"
+                                        placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email
+                                        Address</label>
+                                    <input type="email" id="email"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition-colors"
+                                        placeholder="Your email">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition-colors"
+                                    placeholder="Your phone number">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested
+                                    In</label>
+                                <select id="service"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition-colors">
+                                    <option value="" selected disabled>Select a service</option>
+                                    <option value="landscape-design">Lawn Mowing</option>
+                                    <option value="garden-installation">Mulch Services</option>
+                                    <option value="hardscaping">Shrub and Hedge Trimming</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="3"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring focus:ring-primary/20 focus:border-primary transition-colors"
+                                    placeholder="Tell us about your project"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-8 mb-11">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Our Location</h4>
+                                    <p class="text-gray-600">Wolcott, CT & surrounding areas.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fas fa-phone-alt text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Phone Number</h4>
+                                    <p class="text-gray-600">(475) 372-5325</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fas fa-envelope text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Email Address</h4>
+                                    <p class="text-gray-600">jsmowingct@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold mb-6">Follow Us</h3>
+                        <div class="flex gap-4">
+                            <a href="https://www.facebook.com/profile.php?id=61573600267370" target="_blank"
+                                class="bg-primary/10 hover:bg-primary/20 transition-colors p-3 rounded-full w-12 h-12 flex items-center justify-center text-primary text-xl">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/jsmowingct/" target="_blank"
+                                class="bg-primary/10 hover:bg-primary/20 transition-colors p-3 rounded-full w-12 h-12 flex items-center justify-center text-primary text-xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <span class="text-secondary text-3xl"><i class="fas fa-leaf"></i></span>
+                        <span class="font-serif font-bold text-2xl text-white">JS<span
+                                class="text-secondary">Mowing</span></span>
+                    </a>
+                    <p class="text-gray-300 mb-6">
+                        Creating beautiful, sustainable landscapes for residential and commercial properties since 2005.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/profile.php?id=61573600267370" target="_blank"
+                            class="text-gray-300 hover:text-secondary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jsmowingct/" target="_blank"
+                            class="text-gray-300 hover:text-secondary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="#services"
+                                class="text-gray-300 hover:text-secondary transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-secondary transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition-colors">Lawn
+                                Mowing</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition-colors">Mulch
+                                Services</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition-colors">Shrub and
+                                Hedge Trimming
+                            </a>
+
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">
+                        Subscribe to our newsletter for landscaping tips and updates.
+                    </p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 rounded-l-lg w-full focus:outline-none text-gray-800">
+                            <button type="submit"
+                                class="bg-primary hover:bg-primary/90 transition-colors px-4 py-3 rounded-r-lg">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-gray-400 text-sm">
+                        By subscribing, you agree to our Privacy Policy.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        &copy; 2025 JSMowing. All rights reserved.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top"
+        class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <!-- Services Section JS  -->
+    <script>
+        // This would be part of your main JavaScript file
+        // Just including it here for the services section
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animation for service cards on scroll
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            serviceCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
